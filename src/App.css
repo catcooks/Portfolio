@@ -1,0 +1,30 @@
+/* App.css */
+.app-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row; 
+  
+  overflow-x: auto; 
+  overflow-y: hidden; 
+  -webkit-overflow-scrolling: touch; 
+  padding: 10px;
+}
+.projects-container::-webkit-scrollbar {
+  display: none; 
+}
+.projects-container BaseCard {
+  max-height: 30px;
+}
+
+.projects-container > div {
+  flex-shrink: 0;
+  width: 30%; 
+}
+
