@@ -15,10 +15,10 @@ const ExpandableText = ({ children, maxLength = 150 }) => {
       <p className="inline transition-all duration-300 ease-in-out">
         {isExpanded ? text : `${text.substring(0, maxLength)}... `}
         <button
-          className="inline ml-1 p-0 border-none bg-transparent text-(--primary-color) text-sm font-semibold cursor-pointer hover:underline"
+          className="expand-btn"
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          {isExpanded ? "See less" : "See more"}
+          {isExpanded ? "Read less" : "Read more"}
         </button>
       </p>
     </div>
