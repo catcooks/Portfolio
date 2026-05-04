@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite' // Add this
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/catcooks/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
   plugins: [
     react(),
     tailwindcss(), // Add this
