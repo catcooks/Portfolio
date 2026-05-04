@@ -16,7 +16,7 @@ function App() {
         <div className="hero-badge">Available for new opportunities</div>
         <div className="profile-container">
           <div className="profile-image">
-            <img src="/javer.jpg" alt="Javer Benito" />
+           <img src={`${import.meta.env.BASE_URL}javer.jpg`} alt="Javer Benito" />
           </div>
         </div>
         <h1>Javer Benito</h1>
