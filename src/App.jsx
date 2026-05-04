@@ -105,6 +105,22 @@ function App() {
               <Tag>Tauri</Tag>
             </div>
           </BaseCard>
+
+          <BaseCard className="project-card">
+            <TitleLink onClick={() => handleTitleClick("https://github.com/catcooks/my-cafe")}>
+              My cafe
+            </TitleLink>
+            <ExpandableText>  
+              An Interactive Management WebApp front end Idea for Cafe management or cashier, I created this for small cafe
+              business intended to help manage and do most of the business work. this project have automations, orders, stock inventory updates,
+              employee updates etc. 
+            </ExpandableText>
+            <div className="project-tags">
+            <Tag>React</Tag>
+            <Tag>Vue</Tag>
+            <Tag>TypeScript</Tag>
+            </div>
+          </BaseCard>
         </div>
       </section>
     </div>
