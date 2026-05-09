@@ -1,0 +1,53 @@
+/* Existing .glass-card styles... */
+
+.glass-card.is-loading {
+  pointer-events: none; /* Prevent hover transforms while loading */
+  min-height: 150px;    /* Ensure visibility if children are empty */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-glass);
+  border-top: 3px solid var(--accent-primary, #fff); /* Fallback to white if accent isn't defined */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Shimmer effect for the background during load */
+.glass-card.is-loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--bg-card-hover),
+    transparent
+  );
+  transition: none;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

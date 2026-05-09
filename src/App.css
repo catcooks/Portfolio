@@ -1,27 +1,28 @@
-/* App.css */
+
 .app-container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem;
+  padding-bottom: 0; 
 }
 
 .hero-section {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   padding: 2rem 0;
 }
 
 .profile-container {
+  order: 1;
   position: relative;
-  margin-bottom: 2rem;
+  justify-items: center;
 }
 
 .profile-image {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   padding: 4px;
   background: var(--accent-gradient);
@@ -45,6 +46,16 @@
   font-weight: 600;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(139, 92, 246, 0.2);
+  max-width: 250px;
+}
+
+.name{
+  text-align:start;
+}
+.details{
+ max-width: 90%;
+ margin: 0;
+ text-align: start;
 }
 
 .projects-grid {
@@ -70,14 +81,68 @@
   .app-container {
     padding: 2rem 1rem;
   }
-  
+  .hero-section{
+    flex-direction: column;
+  }
+  .profile-container{
+    order: 0;
+  }
+  .details{
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
   .projects-grid {
     grid-template-columns: 1fr;
   }
   
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
   }
+
+  .name{
+  text-align:center;
+}
+}
+
+
+
+.hero-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+/* Base size for all icons */
+.social-link svg {
+  width: 36px;
+  height: 36px;
+}
+
+/* Hide the colored icon by default */
+.icon-hover {
+  display: none;
+}
+
+/* Hover States */
+.social-link:hover {
+  transform: scale(1.15); /* Scale up the link container */
+}
+
+.social-link:hover .icon-default {
+  display: none; /* Hide black icon on hover */
+}
+
+.social-link:hover .icon-hover {
+  display: block; /* Show colored icon on hover */
 }
 
