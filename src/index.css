@@ -249,5 +249,5 @@ footer{
   margin-left: -2rem !important;
   margin-right: -2rem !important;
   width: calc(100% + 4rem) !important;
-
+  border-top: 1px solid var(--border-glass);
 }
